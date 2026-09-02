@@ -5,16 +5,18 @@ import steelwareLogo from "@/assets/images/steelware.png";
 import trashitLogo from "@/assets/images/TrashIT.png";
 import osucraftLogo from "@/assets/images/creeper.png";
 
-interface Props {
-  type: 'catfighter' | 'breakout' | 'osucraft' | 'steelware' | 'trashit' | 'dreamland';
-  class?: string;
-}
+
 
 const { type, class: className = "w-14 h-14" } = Astro.props;
 
-const imageMap = {
+export const imageMap = {
+    null: {
+    src: null,
+    alt: "null image",
+    pixelated: false,
+  },
     dreamland: {
-    src: catfighterLogo.src,
+    src: null,
     alt: "Borders of Dreamland [next project in progress]",
     pixelated: false,
   },
@@ -46,9 +48,14 @@ const imageMap = {
 };
 
 const current = imageMap[type];
+export type Images = keyof typeof imageMap;
+interface Props {
+  type: Images;
+  class?: string;
+}
 ---
 
-{current && (
+{current && current.src && (
   <img
     src={current.src}
     alt={current.alt}

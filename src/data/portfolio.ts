@@ -1,3 +1,5 @@
+import type { Images } from "@/components/icons/ProjectIcons.astro";
+
 export interface ProjectItem {
   id: string;
   title: string;
@@ -5,7 +7,7 @@ export interface ProjectItem {
   description: string;
   genre: string;
   tags: string[];
-  iconType: 'catfighter' | 'breakout' | 'osucraft' | 'steelware' | 'trashit';
+  iconType: Images;
   link: string;
   linkType: 'STEAM' | 'GITHUB' | 'WEB';
   featured?: boolean;
@@ -114,12 +116,12 @@ export const portfolioConfig: PortfolioConfig = {
       id: "dreamland",
       title: "BORDERS OF DREAMLAND",
       subtitle: "In Development",
-      description: "",
-      genre: "",
-      tags: ["Unity", "C#", "Pixel Art", "Steam"],
-      iconType: "catfighter",
-      link: "https://store.steampowered.com/app/3664280/Catfighter_In_the_Lands_of_Sinners/?beta=0",
-      linkType: "STEAM",
+      description: "In Development",
+      genre: "Psychological political horror",
+      tags: ["Unity", "C#", "Pixel Art", "Blender", "Steam"],
+      iconType: "null",
+      link: "https://github.com/RadekPelikan/pre-gamejam-2026",
+      linkType: "GITHUB",
       featured: true
     },
     {
