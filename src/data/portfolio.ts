@@ -110,6 +110,18 @@ export const portfolioConfig: PortfolioConfig = {
     "Game Physics & Audio"
   ],
   projects: [
+      {
+      id: "dreamland",
+      title: "BORDERS OF DREAMLAND",
+      subtitle: "In Development",
+      description: "",
+      genre: "",
+      tags: ["Unity", "C#", "Pixel Art", "Steam"],
+      iconType: "catfighter",
+      link: "https://store.steampowered.com/app/3664280/Catfighter_In_the_Lands_of_Sinners/?beta=0",
+      linkType: "STEAM",
+      featured: true
+    },
     {
       id: "catfighter",
       title: "CATFIGHTER: IN THE LANDS OF SINNERS",
