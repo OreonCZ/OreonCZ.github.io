@@ -1,119 +1,116 @@
 ---
-import { portfolioData } from '../data/portfolio';
+import { portfolioConfig } from '../data/portfolio';
+import CastleLandscape from './icons/CastleLandscape.astro';
 
-const { personal, socialLinks } = portfolioData;
+const { personal, socials } = portfolioConfig;
 ---
 
-<section id="contact" class="py-24 border-t border-white/[0.08] relative overflow-hidden">
-  <!-- Subtle background blur highlight -->
-  <div class="absolute inset-0 pointer-events-none -z-10 flex items-center justify-center">
-    <div class="w-[500px] h-[350px] bg-indigo-600/10 rounded-full blur-[140px]"></div>
+<section id="contact" class="py-16 sm:py-20 px-6 sm:px-10 lg:px-12 border-b border-white/[0.08] relative">
+  <!-- Section Tag -->
+  <div class="flex items-center gap-2 text-xs font-mono tracking-widest text-zinc-400 uppercase mb-8">
+    <span class="text-zinc-600">//</span>
+    <span>CONTACT</span>
   </div>
 
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-    <div class="space-y-4">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider text-indigo-400 bg-indigo-500/10 border border-indigo-500/20">
-        Let's Connect
-      </div>
-      <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-        Have a project in mind? <br />
-        <span class="gradient-text">Let's build something together.</span>
-      </h2>
-      <p class="text-base sm:text-lg text-slate-400 max-w-xl mx-auto leading-relaxed">
-        Whether you have a question, an opportunity, or just want to say hi, my inbox is always open.
-      </p>
-    </div>
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-white/10 bg-black/40 p-6 sm:p-8 relative">
+    <!-- Corner crosses -->
+    <span class="absolute top-1 left-1 text-[8px] font-mono text-white/30">+</span>
+    <span class="absolute top-1 right-1 text-[8px] font-mono text-white/30">+</span>
+    <span class="absolute bottom-1 left-1 text-[8px] font-mono text-white/30">+</span>
+    <span class="absolute bottom-1 right-1 text-[8px] font-mono text-white/30">+</span>
 
-    <!-- Contact Box -->
-    <div class="p-8 sm:p-10 rounded-2xl bg-gradient-to-b from-slate-900/90 to-[#0d1322] border border-white/[0.08] max-w-xl mx-auto space-y-6 shadow-2xl">
+    <!-- Contact Info (Left 7 cols on desktop) -->
+    <div class="lg:col-span-7 space-y-6">
       <div class="space-y-2">
-        <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Direct Email</span>
-        <div class="text-xl sm:text-2xl font-mono font-bold text-white break-all">
-          {personal.email}
+        <h3 class="text-xl sm:text-2xl font-bold font-mono tracking-wider text-white uppercase">
+          INITIATE CONTACT SIGNAL
+        </h3>
+        <p class="text-xs sm:text-sm font-mono text-zinc-400 leading-relaxed max-w-lg">
+          Interested in game development collaborations, software engineering roles, or indie game design? Transmit a message directly into my inbox.
+        </p>
+      </div>
+
+      <!-- Contact Details Stack -->
+      <div class="space-y-3 font-mono text-xs text-zinc-300">
+        <!-- Direct Email -->
+        <div class="flex items-center gap-3">
+          <svg class="w-4 h-4 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          <a href={socials.email} class="hover:text-white transition-colors underline decoration-white/20">
+            {personal.email}
+          </a>
+        </div>
+
+        <!-- Location -->
+        <div class="flex items-center gap-3">
+          <svg class="w-4 h-4 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+          <span class="text-zinc-400">{personal.location}</span>
+        </div>
+
+        <!-- Status -->
+        <div class="flex items-center gap-3">
+          <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <span class="text-emerald-400 uppercase tracking-wider">{personal.status}</span>
         </div>
       </div>
 
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+      <!-- Action Button -->
+      <div class="pt-2 flex items-center gap-4">
         <a
-          href={socialLinks.email}
-          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium shadow-md shadow-indigo-500/20 hover:shadow-glow transition-all duration-200"
+          href={socials.email}
+          class="inline-flex items-center gap-2.5 px-6 py-3 border border-white/20 hover:border-white text-xs font-mono tracking-widest text-white hover:bg-white hover:text-black uppercase transition-all"
         >
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-          </svg>
-          <span>Send Message</span>
+          <span>GET IN TOUCH</span>
+          <span>&rarr;</span>
         </a>
 
         <button
-          id="copy-email-btn"
+          id="copy-mail-btn"
           data-email={personal.email}
           type="button"
-          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-slate-800/90 hover:bg-slate-800 text-slate-200 hover:text-white font-medium border border-white/[0.08] transition-colors"
+          class="text-xs font-mono text-zinc-500 hover:text-white transition-colors"
         >
-          <svg id="copy-icon" class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
-          </svg>
-          <span id="copy-text">Copy Email</span>
+          <span id="copy-mail-label">[ COPY EMAIL ]</span>
         </button>
       </div>
+    </div>
 
-      <!-- Social links row -->
-      <div class="pt-6 border-t border-white/[0.08] flex items-center justify-center gap-6 text-sm text-slate-400">
-        <a
-          href={socialLinks.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hover:text-white transition-colors"
-        >
-          GitHub
-        </a>
-        <span class="text-white/20">•</span>
-        <a
-          href={socialLinks.linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hover:text-white transition-colors"
-        >
-          LinkedIn
-        </a>
-        {socialLinks.twitter && (
-          <>
-            <span class="text-white/20">•</span>
-            <a
-              href={socialLinks.twitter}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hover:text-white transition-colors"
-            >
-              Twitter / X
-            </a>
-          </>
-        )}
+    <!-- Castle Landscape Illustration (Right 5 cols on desktop) -->
+    <div class="lg:col-span-5 border border-white/10 bg-black/90">
+      <CastleLandscape />
+      <div class="px-3 py-1.5 border-t border-white/10 text-[9px] font-mono text-zinc-500 flex justify-between">
+        <span>SECTOR.CASTLE</span>
+        <span>MIST // NIGHT</span>
       </div>
     </div>
   </div>
 </section>
 
 <script>
-  const copyBtn = document.getElementById('copy-email-btn');
-  const copyText = document.getElementById('copy-text');
-  const email = copyBtn?.getAttribute('data-email') || '';
+  const copyBtn = document.getElementById('copy-mail-btn');
+  const label = document.getElementById('copy-mail-label');
+  const mail = copyBtn?.getAttribute('data-email') || '';
 
   copyBtn?.addEventListener('click', async () => {
     try {
-      await navigator.clipboard.writeText(email);
-      if (copyText) {
-        copyText.textContent = 'Copied to clipboard!';
+      await navigator.clipboard.writeText(mail);
+      if (label) {
+        label.textContent = '[ COPIED TO CLIPBOARD! ]';
         setTimeout(() => {
-          copyText.textContent = 'Copy Email';
+          label.textContent = '[ COPY EMAIL ]';
         }, 2000);
       }
     } catch {
-      // Fallback
-      if (copyText) {
-        copyText.textContent = 'Copied!';
+      if (label) {
+        label.textContent = '[ COPIED! ]';
         setTimeout(() => {
-          copyText.textContent = 'Copy Email';
+          label.textContent = '[ COPY EMAIL ]';
         }, 2000);
       }
     }

@@ -5,35 +5,44 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#090d16',
-        surface: '#111726',
-        'surface-hover': '#192238',
-        border: 'rgba(255, 255, 255, 0.08)',
-        accent: {
-          DEFAULT: '#6366f1', // Indigo
-          hover: '#4f46e5',
-          light: '#818cf8',
+        hud: {
+          bg: '#060709',
+          card: '#0a0c10',
+          'card-hover': '#10131a',
+          border: 'rgba(255, 255, 255, 0.08)',
+          'border-bright': 'rgba(255, 255, 255, 0.2)',
+          tag: 'rgba(255, 255, 255, 0.04)',
+          text: '#e2e8f0',
+          muted: '#848d9a',
+          accent: '#ffffff',
         },
       },
       fontFamily: {
+        mono: [
+          'JetBrains Mono',
+          'SFMono-Regular',
+          'Menlo',
+          'Monaco',
+          'Consolas',
+          'Liberation Mono',
+          'Courier New',
+          'monospace',
+        ],
         sans: [
           'Inter',
           '-apple-system',
           'BlinkMacSystemFont',
           'Segoe UI',
-          'Roboto',
-          'Oxygen',
-          'Ubuntu',
-          'Cantarell',
-          'Fira Sans',
-          'Droid Sans',
-          'Helvetica Neue',
           'sans-serif',
         ],
       },
+      letterSpacing: {
+        hud: '0.15em',
+        'hud-wide': '0.25em',
+      },
       boxShadow: {
-        'glow': '0 0 50px -12px rgba(99, 102, 241, 0.25)',
-        'glow-lg': '0 0 80px -15px rgba(99, 102, 241, 0.35)',
+        'hud': '0 0 0 1px rgba(255, 255, 255, 0.08)',
+        'hud-glow': '0 0 30px rgba(255, 255, 255, 0.05)',
       },
     },
   },

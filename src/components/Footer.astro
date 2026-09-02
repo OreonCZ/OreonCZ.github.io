@@ -1,25 +1,28 @@
 ---
-import { portfolioData } from '../data/portfolio';
-
-const currentYear = new Date().getFullYear();
+import { portfolioConfig } from '../data/portfolio';
 ---
 
-<footer class="border-t border-white/[0.08] py-12 bg-[#060910]">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
-    <div class="text-sm text-slate-400 text-center sm:text-left">
-      <span>&copy; {currentYear} {portfolioData.personal.name}. All rights reserved.</span>
-      <div class="text-xs text-slate-400 mt-1">
-        Built with <a href="https://astro.build" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 underline decoration-white/20">Astro</a> &amp; <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 underline decoration-white/20">Tailwind CSS</a>.
-      </div>
+<footer class="py-6 px-6 sm:px-10 lg:px-12 bg-[#050608] text-xs font-mono text-zinc-500 border-t border-white/[0.08] select-none">
+  <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+    <!-- Left Motto -->
+    <div class="flex items-center gap-2 tracking-wider text-zinc-400 text-center sm:text-left">
+      <span class="text-zinc-600">//</span>
+      <span class="text-[11px] uppercase">BUILT WITH PASSION. FUELED BY SOULS.</span>
     </div>
 
-    <div class="flex items-center gap-6 text-sm text-slate-400">
-      <a href="#about" class="hover:text-white transition-colors">About</a>
-      <a href="#projects" class="hover:text-white transition-colors">Projects</a>
-      <a href="#skills" class="hover:text-white transition-colors">Skills</a>
-      <a href="#experience" class="hover:text-white transition-colors">Experience</a>
-      <a href="#" class="p-2 rounded-lg bg-white/[0.04] hover:bg-white/[0.08] text-slate-300 hover:text-white transition-colors" aria-label="Back to top">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <!-- Right Version & Return to Top -->
+    <div class="flex items-center gap-6">
+      <span class="text-[10px] tracking-widest text-zinc-500 font-mono">
+        {portfolioConfig.personal.version}
+      </span>
+
+      <!-- Back to top button -->
+      <a
+        href="#home"
+        aria-label="Return to top"
+        class="w-7 h-7 border border-white/10 hover:border-white/40 flex items-center justify-center text-zinc-400 hover:text-white transition-colors"
+      >
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
         </svg>
       </a>

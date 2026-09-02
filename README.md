@@ -1,132 +1,96 @@
-# Astro Web Portfolio 🚀
+# OZ GAMEDEV — Web Portfolio 🗡️
 
-A modern, fast, and fully responsive developer portfolio built with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com).
+A dark fantasy, gothic game developer HUD web portfolio built with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com).
 
-## ✨ Features
-
-- ⚡ **Blazing Fast**: Static-site generation with near-zero runtime JavaScript.
-- 🎨 **Modern Dark Aesthetic**: Clean slate/indigo design with ambient background glows and subtle animations.
-- 📱 **Fully Responsive**: Optimized for desktop, tablet, and mobile devices with a responsive navigation menu.
-- 🧩 **Single Data File**: Update all your personal info, projects, skills, and links in **one place** (`src/data/portfolio.ts`).
-- 🔍 **SEO & Social Share Ready**: Preconfigured OpenGraph and Twitter card meta tags.
-- 📬 **Interactive Contact**: One-click "Copy Email" with feedback and direct mailto links.
+Inspired by Souls-like games, retro CRTs, and high-performance game HUDs.
 
 ---
 
-## 🛠️ Tech Stack
+## 🎮 Features
 
-- **Framework**: [Astro 5](https://astro.build/)
-- **Styling**: [Tailwind CSS 3](https://tailwindcss.com/)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Icons**: Handcrafted accessible SVG icons (zero icon-pack overhead)
+- 💀 **Souls-Like HUD Aesthetic**: Monospace technical tags (`// GAME DEVELOPER`, `// GAMEPLAY.GIF`), viewfinder corner crosses (`+`), and custom scanlines.
+- 🗡️ **Gothic Sigil & Pixel Art**: Handcrafted vector illustrations for dark fantasy gameplay scenes, knight portraits, and project crests.
+- 📊 **RPG Status Elements**: Live RPG gauges (`HP`, `ST`, `MP`), soul counter, and window controls.
+- 🕹️ **Authentic Project Showcase**:
+  - **Catfighter: In the Lands of Sinners** (Steam)
+  - **Breakout!** (C / SDL2)
+  - **OsuCraft** (Browser Rhythm Game)
+  - **Steelware.co** (FNAF-Inspired Web Game)
+  - **TrashIT** (MERN Stack Platform)
+- 📱 **Adaptive Layout**: Fixed left HUD sidebar on desktop, responsive top header and drawer on mobile.
+- ⚡ **Zero Overhead**: Static site output (~50 KB) with near-zero runtime JavaScript.
 
 ---
 
 ## 🚀 Getting Started
 
-### 1. Install Dependencies
-```bash
-npm install
-```
-
-### 2. Start the Development Server
+### 1. Development Server
 ```bash
 npm run dev
 ```
-Open [http://localhost:4321](http://localhost:4321) in your browser to view the site.
+Open [http://localhost:4321](http://localhost:4321) in your browser.
 
-### 3. Build for Production
+### 2. Build for Production
 ```bash
 npm run build
 ```
-The optimized production output will be generated in the `dist/` directory.
+Generates optimized static HTML in the `dist/` directory.
 
-### 4. Preview the Production Build
+### 3. Preview Production Build
 ```bash
 npm run preview
 ```
 
 ---
 
-## ✏️ Customizing Your Portfolio
+## ✏️ Customization
 
-To make this portfolio yours, you only need to edit **`src/data/portfolio.ts`**:
+All portfolio content, projects, skills, and links can be customized in **`src/data/portfolio.ts`**:
 
 ```typescript
-export const portfolioData = {
+export const portfolioConfig = {
   personal: {
-    name: "Your Name",
-    title: "Your Title (e.g., Full-Stack Engineer)",
-    tagline: "Your punchy personal tagline...",
-    bio: [
-      "First paragraph of your bio...",
-      "Second paragraph of your bio..."
-    ],
-    location: "City, Country",
-    status: "Available for new opportunities",
-    email: "your.email@example.com",
-    stats: [
-      { label: "Years Experience", value: "3+" },
-      { label: "Projects Completed", value: "15+" }
-    ]
+    handle: "OREONCZ",
+    brand: "OZ GAMEDEV",
+    name: "Filip Kučera",
+    role: "GAME DEVELOPER",
+    tagline: "CRAFTING DARK WORLDS & EXPERIENCES.",
+    // ...
   },
-  socialLinks: {
-    github: "https://github.com/yourusername",
-    linkedin: "https://linkedin.com/in/yourusername",
-    email: "mailto:your.email@example.com"
-  },
-  skills: [
-    // Add or adjust your skill categories
-  ],
-  projects: [
-    // Add your projects here
-  ],
-  experience: [
-    // Add your career milestones here
-  ]
+  // ...
 };
 ```
 
 ---
 
-## 📂 Project Structure
+## 📂 Architecture
 
 ```text
 /
 ├── public/
-│   └── favicon.svg           # Developer logo SVG
+│   └── favicon.svg               # OZ monogram icon
 ├── src/
 │   ├── components/
-│   │   ├── Navbar.astro      # Sticky navigation header
-│   │   ├── Hero.astro        # Hero section with CTAs
-│   │   ├── About.astro       # Bio and highlights
-│   │   ├── Projects.astro    # Featured projects section
-│   │   ├── ProjectCard.astro # Individual project card
-│   │   ├── Skills.astro      # Categorized skill badges
-│   │   ├── Experience.astro  # Work history timeline
-│   │   ├── Contact.astro     # Contact CTA box
-│   │   └── Footer.astro      # Footer with copyright
+│   │   ├── icons/
+│   │   │   ├── GameplayScene.astro   # Pixel boss fight scene
+│   │   │   ├── KnightPortrait.astro  # Armored knight avatar
+│   │   │   ├── GothicSigil.astro     # Sword crest art
+│   │   │   ├── CastleLandscape.astro # Dark spires landscape
+│   │   │   └── ProjectIcons.astro    # 5 project SVG badges
+│   │   ├── Navbar.astro          # Desktop sidebar + mobile header
+│   │   ├── Hero.astro            # Intro & gameplay viewport
+│   │   ├── About.astro           # Bio & knight portrait
+│   │   ├── Projects.astro        # 5-card project showcase
+│   │   ├── ProjectCard.astro     # Individual game card
+│   │   ├── HudWidgets.astro      # Skills, Recent Project, Status
+│   │   ├── Contact.astro         # Direct transmission & castle
+│   │   └── Footer.astro          # Bottom status ticker
 │   ├── data/
-│   │   └── portfolio.ts      # Central configuration & content
+│   │   └── portfolio.ts          # Authentic portfolio data
 │   ├── layouts/
-│   │   └── Layout.astro      # Main HTML wrapper & SEO
+│   │   └── Layout.astro          # Window frame HUD wrapper
 │   ├── pages/
-│   │   └── index.astro       # Landing page
+│   │   └── index.astro           # Aggregated page
 │   └── styles/
-│       └── global.css        # Tailwind directives & base styles
-├── astro.config.mjs          # Astro configuration
-├── tailwind.config.mjs       # Tailwind CSS theme configuration
-├── tsconfig.json             # TypeScript configuration
-└── package.json
+│       └── global.css            # CRT scanlines & HUD corners
 ```
-
----
-
-## 🌐 Deployment
-
-This Astro site is completely static and can be deployed anywhere for free:
-
-- **[Vercel](https://vercel.com/)**: Connect your GitHub repository and Vercel will automatically detect Astro and build the project.
-- **[Netlify](https://www.netlify.com/)**: Build command: `npm run build`, Publish directory: `dist`.
-- **[Cloudflare Pages](https://pages.cloudflare.com/)**: Framework preset: `Astro`, Output directory: `dist`.
-- **[GitHub Pages](https://docs.astro.build/en/guides/deploy/github/)**: Use the official Astro GitHub Actions deployment workflow.

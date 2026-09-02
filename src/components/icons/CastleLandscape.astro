@@ -1,0 +1,78 @@
+---
+interface Props {
+  class?: string;
+}
+const { class: className = "w-full h-auto" } = Astro.props;
+---
+
+<div class={`relative overflow-hidden ${className}`}>
+  <svg class="w-full h-auto aspect-[16/9] block" viewBox="0 0 500 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="castleSky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#040406"/>
+        <stop offset="60%" stop-color="#0e1118"/>
+        <stop offset="100%" stop-color="#060709"/>
+      </linearGradient>
+      <radialGradient id="castleMoon" cx="65%" cy="30%" r="40%">
+        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25"/>
+        <stop offset="40%" stop-color="#ffffff" stop-opacity="0.08"/>
+        <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+
+    <!-- Sky -->
+    <rect width="500" height="280" fill="url(#castleSky)"/>
+    <rect width="500" height="280" fill="url(#castleMoon)"/>
+
+    <!-- Distant Mountains -->
+    <path d="M0 240 L100 170 L200 220 L320 150 L420 190 L500 160 L500 280 L0 280 Z" fill="#080a0f"/>
+
+    <!-- Midground Castle Spire Ridge -->
+    <g fill="#050608">
+      <!-- Craggy Mountain Base -->
+      <path d="M180 280 L250 180 L310 140 L370 120 L440 180 L500 280 Z"/>
+
+      <!-- Gothic Castle Spires and Turrets -->
+      <!-- Left Watchtower -->
+      <rect x="300" y="80" width="16" height="70"/>
+      <polygon points="308,45 296,80 320,80"/>
+      <!-- Small spire left -->
+      <polygon points="280,75 274,110 286,110"/>
+      <rect x="275" y="110" width="10" height="40"/>
+
+      <!-- Great Central Spire -->
+      <rect x="330" y="60" width="30" height="90"/>
+      <polygon points="345,15 325,60 365,60"/>
+      <line x1="345" y1="8" x2="345" y2="18" stroke="#ffffff" stroke-width="1.5"/>
+      <line x1="341" y1="12" x2="349" y2="12" stroke="#ffffff" stroke-width="1.5"/>
+
+      <!-- Right Turret -->
+      <rect x="375" y="85" width="18" height="65"/>
+      <polygon points="384,50 370,85 398,85"/>
+
+      <!-- Far Right Tower -->
+      <rect x="410" y="110" width="14" height="50"/>
+      <polygon points="417,75 406,110 428,110"/>
+
+      <!-- Battlements / Curtain Walls -->
+      <rect x="290" y="110" width="120" height="35"/>
+      <!-- Crenellations -->
+      <rect x="295" y="105" width="6" height="6"/>
+      <rect x="308" y="105" width="6" height="6"/>
+      <rect x="320" y="105" width="6" height="6"/>
+      <rect x="360" y="105" width="6" height="6"/>
+      <rect x="375" y="105" width="6" height="6"/>
+      <rect x="390" y="105" width="6" height="6"/>
+      <rect x="405" y="105" width="6" height="6"/>
+    </g>
+
+    <!-- Glowing Window Slits in Castle -->
+    <rect x="343" y="85" width="4" height="12" rx="1" fill="#fef08a" fill-opacity="0.8"/>
+    <rect x="306" y="98" width="3" height="8" rx="1" fill="#fef08a" fill-opacity="0.6"/>
+    <rect x="382" y="102" width="3" height="8" rx="1" fill="#fef08a" fill-opacity="0.6"/>
+
+    <!-- Mist and Fog Swirls -->
+    <path d="M0 240 Q 140 215 280 235 T 500 230 L 500 280 L 0 280 Z" fill="#0d1017" fill-opacity="0.7"/>
+    <path d="M120 255 Q 260 240 400 250 L 500 280 L 0 280 Z" fill="#060709" fill-opacity="0.9"/>
+  </svg>
+</div>

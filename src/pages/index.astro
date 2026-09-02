@@ -3,20 +3,18 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import About from '../components/About.astro';
 import Projects from '../components/Projects.astro';
-import Skills from '../components/Skills.astro';
-import Experience from '../components/Experience.astro';
+import HudWidgets from '../components/HudWidgets.astro';
 import Contact from '../components/Contact.astro';
-import { portfolioData } from '../data/portfolio';
+import { portfolioConfig } from '../data/portfolio';
 
-const pageTitle = `${portfolioData.personal.name} | ${portfolioData.personal.title}`;
-const pageDescription = portfolioData.personal.tagline;
+const title = `${portfolioConfig.personal.brand} | ${portfolioConfig.personal.handle}`;
+const description = `${portfolioConfig.personal.name} - ${portfolioConfig.personal.role}. ${portfolioConfig.personal.subtagline}`;
 ---
 
-<Layout title={pageTitle} description={pageDescription}>
+<Layout title={title} description={description}>
   <Hero />
   <About />
   <Projects />
-  <Skills />
-  <Experience />
+  <HudWidgets />
   <Contact />
 </Layout>

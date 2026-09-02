@@ -1,0 +1,179 @@
+---
+import { portfolioConfig } from '../data/portfolio';
+import GothicSigil from './icons/GothicSigil.astro';
+
+const { skillsProgress, recentProject, allSkills } = portfolioConfig;
+---
+
+<section id="skills" class="py-16 sm:py-20 px-6 sm:px-10 lg:px-12 border-b border-white/[0.08] relative">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+    <!-- WIDGET 1: // SKILLS (lg: 4 cols) -->
+    <div class="lg:col-span-4 border border-white/10 bg-black/40 p-6 flex flex-col justify-between space-y-6 relative">
+      <!-- Corners -->
+      <span class="absolute top-1 left-1 text-[8px] font-mono text-white/30">+</span>
+      <span class="absolute top-1 right-1 text-[8px] font-mono text-white/30">+</span>
+      <span class="absolute bottom-1 left-1 text-[8px] font-mono text-white/30">+</span>
+      <span class="absolute bottom-1 right-1 text-[8px] font-mono text-white/30">+</span>
+
+      <div class="space-y-5">
+        <div class="flex items-center gap-2 text-xs font-mono tracking-widest text-zinc-400 uppercase">
+          <span class="text-zinc-600">//</span>
+          <span>SKILLS</span>
+        </div>
+
+        <!-- Progress Bars -->
+        <div class="space-y-4">
+          {skillsProgress.map((skill) => (
+            <div class="space-y-1.5 font-mono text-xs">
+              <div class="flex items-center justify-between text-[11px]">
+                <span class="text-zinc-300 uppercase tracking-wider">{skill.name}</span>
+                <span class="text-zinc-500">{skill.level}%</span>
+              </div>
+              <div class="w-full h-1.5 bg-white/[0.06] overflow-hidden">
+                <div
+                  class="h-full bg-white transition-all duration-500"
+                  style={`width: ${skill.level}%`}
+                ></div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- Collapsible full skill list -->
+        <div id="all-skills-panel" class="hidden pt-4 border-t border-white/[0.08] space-y-2">
+          <span class="text-[10px] uppercase tracking-wider text-zinc-500 block">All Technologies</span>
+          <div class="flex flex-wrap gap-1.5">
+            {allSkills.map((tech) => (
+              <span class="text-[10px] font-mono text-zinc-300 bg-white/[0.04] px-2 py-0.5 border border-white/[0.06]">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <button
+        id="toggle-all-skills"
+        type="button"
+        class="w-fit text-[11px] font-mono tracking-wider text-zinc-400 hover:text-white border border-white/10 hover:border-white/40 px-3 py-1.5 uppercase transition-colors"
+      >
+        <span id="toggle-skills-text">+ VIEW ALL SKILLS</span>
+      </button>
+    </div>
+
+    <!-- WIDGET 2: // RECENT PROJECT (lg: 4 cols) -->
+    <div class="lg:col-span-4 border border-white/10 bg-black/40 p-6 flex flex-col justify-between space-y-6 relative">
+      <!-- Corners -->
+      <span class="absolute top-1 left-1 text-[8px] font-mono text-white/30">+</span>
+      <span class="absolute top-1 right-1 text-[8px] font-mono text-white/30">+</span>
+      <span class="absolute bottom-1 left-1 text-[8px] font-mono text-white/30">+</span>
+      <span class="absolute bottom-1 right-1 text-[8px] font-mono text-white/30">+</span>
+
+      <div class="space-y-4">
+        <div class="flex items-center gap-2 text-xs font-mono tracking-widest text-zinc-400 uppercase">
+          <span class="text-zinc-600">//</span>
+          <span>RECENT PROJECT</span>
+        </div>
+
+        <!-- Thumbnail Preview -->
+        <div class="relative border border-white/10 bg-black/80 aspect-video overflow-hidden group">
+          <svg class="w-full h-full block" viewBox="0 0 320 180" fill="none">
+            <rect width="320" height="180" fill="#08090d"/>
+            <circle cx="210" cy="80" r="50" fill="#ffffff" fill-opacity="0.12"/>
+            <circle cx="210" cy="80" r="30" fill="#ffffff" fill-opacity="0.75"/>
+            <!-- Silhouette Knight & Boss -->
+            <polygon points="120,160 135,110 145,160" fill="#ffffff"/>
+            <line x1="140" y1="125" x2="160" y2="105" stroke="#ffffff" stroke-width="2"/>
+            <polygon points="190,160 210,70 230,160" fill="#1e2430"/>
+            <path d="M195 75 Q 180 50 185 30" stroke="#ffffff" stroke-width="2"/>
+            <path d="M225 75 Q 240 50 235 30" stroke="#ffffff" stroke-width="2"/>
+          </svg>
+          <div class="absolute bottom-2 left-2 text-[9px] font-mono text-zinc-400 bg-black/80 px-2 py-0.5 border border-white/10">
+            STEAM RELEASE
+          </div>
+        </div>
+
+        <!-- Project Info -->
+        <div class="space-y-1.5">
+          <h4 class="text-xs sm:text-sm font-bold font-mono tracking-wider text-white uppercase line-clamp-1">
+            {recentProject.title}
+          </h4>
+          <p class="text-[11px] font-mono text-zinc-400 leading-relaxed line-clamp-3">
+            {recentProject.subtitle}
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between pt-2">
+        <a
+          href={recentProject.steamLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-[11px] font-mono tracking-wider text-white hover:text-zinc-300 border border-white/20 hover:border-white/50 px-3.5 py-1.5 uppercase transition-colors"
+        >
+          VIEW CASE +
+        </a>
+
+        <!-- Carousel Pagination Dots -->
+        <div class="flex items-center gap-1.5 text-zinc-500 font-mono text-xs">
+          <span class="text-zinc-600">○</span>
+          <span class="text-white">●</span>
+          <span class="text-zinc-600">○</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- WIDGET 3: // STATUS (lg: 4 cols) -->
+    <div class="lg:col-span-4 border border-white/10 bg-black/40 p-6 flex flex-col justify-between space-y-6 relative">
+      <!-- Corners -->
+      <span class="absolute top-1 left-1 text-[8px] font-mono text-white/30">+</span>
+      <span class="absolute top-1 right-1 text-[8px] font-mono text-white/30">+</span>
+      <span class="absolute bottom-1 left-1 text-[8px] font-mono text-white/30">+</span>
+      <span class="absolute bottom-1 right-1 text-[8px] font-mono text-white/30">+</span>
+
+      <div class="space-y-4">
+        <div class="flex items-center gap-2 text-xs font-mono tracking-widest text-zinc-400 uppercase">
+          <span class="text-zinc-600">//</span>
+          <span>STATUS</span>
+        </div>
+
+        <div class="grid grid-cols-12 gap-4 items-center">
+          <!-- Quote & Signature -->
+          <div class="col-span-7 space-y-3">
+            <span class="text-2xl font-serif text-zinc-600 leading-none block">“</span>
+            <p class="text-xs font-mono text-zinc-300 italic leading-relaxed">
+              Built with passion. Fueled by souls. Transforming raw code into living pixel dreams.
+            </p>
+            <div class="pt-2">
+              <div class="text-[11px] font-mono text-zinc-500 uppercase tracking-widest">CREATOR:</div>
+              <div class="text-xs font-mono text-white font-bold tracking-wider">OREONCZ.EXE</div>
+            </div>
+          </div>
+
+          <!-- Gothic Sigil Crest -->
+          <div class="col-span-5 flex justify-center opacity-85 hover:opacity-100 transition-opacity">
+            <GothicSigil class="w-20 h-28" />
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-2 border-t border-white/[0.08] flex items-center justify-between text-[10px] font-mono text-zinc-500">
+        <span>SOUL LEVEL: 99</span>
+        <span>STATUS: {portfolioConfig.personal.status.toUpperCase()}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const toggleBtn = document.getElementById('toggle-all-skills');
+  const panel = document.getElementById('all-skills-panel');
+  const btnText = document.getElementById('toggle-skills-text');
+
+  toggleBtn?.addEventListener('click', () => {
+    const isHidden = panel?.classList.toggle('hidden');
+    if (btnText) {
+      btnText.textContent = isHidden ? '+ VIEW ALL SKILLS' : '- HIDE SKILLS';
+    }
+  });
+</script>

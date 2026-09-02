@@ -1,159 +1,177 @@
-export interface Project {
+export interface ProjectItem {
+  id: string;
   title: string;
+  subtitle: string;
   description: string;
+  genre: string;
   tags: string[];
-  featured: boolean;
-  githubUrl?: string;
-  liveUrl?: string;
-  imageUrl?: string;
-  highlights?: string[];
+  iconType: 'catfighter' | 'breakout' | 'osucraft' | 'steelware' | 'trashit';
+  link: string;
+  linkType: 'STEAM' | 'GITHUB' | 'WEB';
+  featured?: boolean;
 }
 
-export interface ExperienceItem {
-  role: string;
-  company: string;
-  period: string;
-  description: string;
-  technologies?: string[];
+export interface SkillProgress {
+  name: string;
+  level: number;
 }
 
-export interface SkillCategory {
-  category: string;
-  skills: string[];
-}
-
-export interface PortfolioData {
+export interface PortfolioConfig {
   personal: {
+    handle: string;
+    brand: string;
     name: string;
-    title: string;
+    role: string;
     tagline: string;
-    bio: string[];
+    subtagline: string;
+    bioParagraphs: string[];
     location: string;
     status: string;
     email: string;
-    stats: { label: string; value: string }[];
+    version: string;
+    souls: string;
   };
-  socialLinks: {
+  rpgStats: {
+    hp: string;
+    st: string;
+    mp: string;
+    souls: string;
+  };
+  socials: {
     github: string;
     linkedin: string;
-    twitter?: string;
+    instagram: string;
+    steam: string;
     email: string;
   };
-  skills: SkillCategory[];
-  projects: Project[];
-  experience: ExperienceItem[];
+  skillsProgress: SkillProgress[];
+  allSkills: string[];
+  projects: ProjectItem[];
+  recentProject: {
+    title: string;
+    subtitle: string;
+    description: string;
+    link: string;
+    steamLink: string;
+  };
 }
 
-export const portfolioData: PortfolioData = {
+export const portfolioConfig: PortfolioConfig = {
   personal: {
-    name: "Alex Morgan",
-    title: "Full-Stack Developer & Software Architect",
-    tagline: "Crafting fast, accessible, and elegant web experiences from database to pixels.",
-    bio: [
-      "Hello! I am a software engineer passionate about building modern web applications, scalable backends, and intuitive user interfaces. With an emphasis on performance and developer experience, I transform complex ideas into reliable digital products.",
-      "When I am not coding, you can find me exploring open-source tools, writing technical articles, or experimenting with new web technologies like Astro, Rust, and serverless architectures."
+    handle: "OREONCZ",
+    brand: "OZ GAMEDEV",
+    name: "Filip Kučera",
+    role: "GAME DEVELOPER",
+    tagline: "CRAFTING DARK WORLDS & EXPERIENCES.",
+    subtagline: "Independent game developer, pixel artist, and software engineering student with a deep passion for dark fantasy, retro aesthetics, and challenging gameplay mechanics.",
+    bioParagraphs: [
+      "I successfully graduated from the Secondary Technical School in Mladá Boleslav (SPSMB), specializing in Information Technology. This background honed both my logical programming foundation and creative imagination to build immersive interactive worlds.",
+      "My most ambitious creation so far is 'Catfighter: In the Lands of Sinners', a dark fantasy souls-like action visual novel that I developed and released on Steam for 5€. I poured immense dedication into its pixel art, atmospheric soundtrack, and challenging combat.",
+      "Currently pursuing higher education at VSB-TUO (Technical University of Ostrava). When I'm not writing shaders or compiling code in C# and C, you'll find me listening to heavy metal, animating pixel sprites, or chilling with my bearded dragon Kirby! 🦎"
     ],
-    location: "San Francisco, CA / Remote",
-    status: "Available for new opportunities",
-    email: "alex.morgan@example.com",
-    stats: [
-      { label: "Years Experience", value: "5+" },
-      { label: "Projects Completed", value: "30+" },
-      { label: "Open Source Contributions", value: "100+" },
-      { label: "Client Satisfaction", value: "100%" }
-    ]
+    location: "Czech Republic (VSB-TUO)",
+    status: "Open to work",
+    email: "oreoncz@gmail.com",
+    version: "VER. 1.0.0",
+    souls: "6660"
   },
-  socialLinks: {
-    github: "https://github.com",
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
-    email: "mailto:alex.morgan@example.com"
+  rpgStats: {
+    hp: "100/100",
+    st: "85/85",
+    mp: "70/70",
+    souls: "6660"
   },
-  skills: [
-    {
-      category: "Frontend Development",
-      skills: ["Astro", "TypeScript", "React", "Next.js", "Tailwind CSS", "Vue.js", "HTML5/CSS3"]
-    },
-    {
-      category: "Backend & APIs",
-      skills: ["Node.js", "Express", "Python", "FastAPI", "PostgreSQL", "Prisma", "GraphQL", "Redis"]
-    },
-    {
-      category: "DevOps & Cloud",
-      skills: ["Docker", "Git", "GitHub Actions", "Vercel", "AWS (S3, Lambda)", "Cloudflare Workers"]
-    },
-    {
-      category: "Design & Practices",
-      skills: ["Responsive Design", "Web Accessibility (a11y)", "UI/UX Prototyping", "RESTful Architecture", "Testing (Vitest, Playwright)"]
-    }
+  socials: {
+    github: "https://github.com/OreonCZ",
+    linkedin: "https://www.linkedin.com/in/filip-ku%C4%8Dera-592929294/",
+    instagram: "https://www.instagram.com/oreoncz/",
+    steam: "https://store.steampowered.com/app/3664280/Catfighter_In_the_Lands_of_Sinners/?beta=0",
+    email: "mailto:oreoncz@gmail.com"
+  },
+  skillsProgress: [
+    { name: "UNITY", level: 100 },
+    { name: "C#", level: 100 },
+    { name: "PIXEL ART", level: 100 },
+    { name: "SHADER GRAPH", level: 70 },
+    { name: "JAVASCRIPT / TS", level: 80 }
+  ],
+  allSkills: [
+    "Unity Engine",
+    "C#",
+    "Pixel Art & Aseprite",
+    "Shader Graph",
+    "C / Assembly",
+    "SDL2",
+    "TypeScript / JavaScript",
+    "MERN Stack",
+    "Linux Systems",
+    "Electron",
+    "Git",
+    "Game Physics & Audio"
   ],
   projects: [
     {
-      title: "DevPulse - Developer Productivity Hub",
-      description: "A centralized dashboard for developers to track GitHub pull requests, CI/CD pipeline statuses, and team metrics in real-time.",
-      tags: ["Astro", "TypeScript", "Tailwind CSS", "GitHub API"],
-      featured: true,
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
-      highlights: [
-        "Reduced context switching by 40% across active sprint cycles",
-        "Sub-100ms response times powered by static generation and edge cache"
-      ]
+      id: "catfighter",
+      title: "CATFIGHTER: IN THE LANDS OF SINNERS",
+      subtitle: "Souls-like RPG",
+      description: "Souls-like open-world visual novel with cute cats and creepy elements. Available on Steam for 5€.",
+      genre: "Souls-like RPG",
+      tags: ["Unity", "C#", "Pixel Art", "Steam"],
+      iconType: "catfighter",
+      link: "https://store.steampowered.com/app/3664280/Catfighter_In_the_Lands_of_Sinners/?beta=0",
+      linkType: "STEAM",
+      featured: true
     },
     {
-      title: "FlowState - Task & Workflow Automation",
-      description: "Lightweight visual workflow builder allowing users to automate routine tasks with webhook triggers and third-party integrations.",
-      tags: ["React", "Node.js", "Tailwind CSS", "PostgreSQL"],
-      featured: true,
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
-      highlights: [
-        "Interactive node graph with drag-and-drop workflow canvas",
-        "Zero-latency optimistic UI updates"
-      ]
+      id: "breakout",
+      title: "BREAKOUT!",
+      subtitle: "2D Arcade",
+      description: "My first semester project: classic retro breakout game built with SDL2 library in pure C.",
+      genre: "2D Arcade",
+      tags: ["C", "SDL2", "Retro"],
+      iconType: "breakout",
+      link: "https://github.com/OreonCZ/Breakout",
+      linkType: "GITHUB"
     },
     {
-      title: "Zenith - Minimalist Markdown Note Taking",
-      description: "Fast, keyboard-first markdown editor with end-to-end encryption, offline synchronization, and instant full-text search.",
-      tags: ["TypeScript", "IndexedDB", "Tailwind CSS", "Web Workers"],
-      featured: true,
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
-      highlights: [
-        "100% offline-first capability via progressive web app architecture",
-        "Instant search indexing 10,000+ notes in under 15ms"
-      ]
+      id: "osucraft",
+      title: "OSUCRAFT",
+      subtitle: "Rhythm Game",
+      description: "Minecraft-inspired rhythm game. BEWARE! Touch that creeper or he's going to explode. Playable in browser.",
+      genre: "Rhythm Game",
+      tags: ["JavaScript", "HTML5", "Audio"],
+      iconType: "osucraft",
+      link: "https://oreoncz.github.io/OsuCraft/",
+      linkType: "WEB"
     },
     {
-      title: "Aurora Component Library",
-      description: "An accessible, themeable UI component library designed for rapid prototyping with seamless Astro and Tailwind support.",
-      tags: ["Astro", "Tailwind CSS", "Accessibility", "NPM Package"],
-      featured: false,
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com"
+      id: "steelware",
+      title: "STEELWARE.CO",
+      subtitle: "FNAF-Inspired",
+      description: "FNAF-inspired survival horror game made by me and my team. Play for free in browser.",
+      genre: "FNAF-Inspired",
+      tags: ["Web", "Horror", "Game Dev"],
+      iconType: "steelware",
+      link: "https://vojtakdo.github.io/FNAF/",
+      linkType: "WEB"
+    },
+    {
+      id: "trashit",
+      title: "TRASHIT",
+      subtitle: "MERN Website",
+      description: "Full-stack MERN website platform for recycling and reselling vintage electronic gear.",
+      genre: "MERN Website",
+      tags: ["React", "Node.js", "MongoDB", "Express"],
+      iconType: "trashit",
+      link: "https://github.com/HonzaJeMocDobrej/TrashIT",
+      linkType: "GITHUB"
     }
   ],
-  experience: [
-    {
-      role: "Senior Software Engineer",
-      company: "TechNova Solutions",
-      period: "2023 - Present",
-      description: "Lead front-end architecture and modern web application development. Mentored junior engineers, established code review standards, and optimized Core Web Vitals across flagship products.",
-      technologies: ["Astro", "TypeScript", "React", "Tailwind CSS", "GraphQL"]
-    },
-    {
-      role: "Full-Stack Developer",
-      company: "HyperScale Digital",
-      period: "2021 - 2023",
-      description: "Designed and implemented high-throughput REST APIs and responsive web apps. Collaborated closely with product designers to ship features from initial wireframes to production deployments.",
-      technologies: ["Node.js", "PostgreSQL", "Next.js", "Docker", "AWS"]
-    },
-    {
-      role: "Junior Web Developer",
-      company: "Apex Studio",
-      period: "2019 - 2021",
-      description: "Developed and maintained client websites, optimized asset pipelines, and built custom landing pages with clean HTML, CSS, and modern JavaScript.",
-      technologies: ["JavaScript", "HTML5", "Sass", "Git", "WordPress"]
-    }
-  ]
+  recentProject: {
+    title: "CATFIGHTER: IN THE LANDS OF SINNERS",
+    subtitle: "Souls-like action RPG with pixel art visuals and dark fantasy world.",
+    description: "Final graduation masterpiece: an expansive open-world dark fantasy visual novel where feline champions battle demonic horrors.",
+    link: "https://store.steampowered.com/app/3664280/Catfighter_In_the_Lands_of_Sinners/?beta=0",
+    steamLink: "https://store.steampowered.com/app/3664280/Catfighter_In_the_Lands_of_Sinners/?beta=0"
+  }
 };

@@ -1,87 +1,71 @@
 ---
-import { portfolioData } from '../data/portfolio';
+import { portfolioConfig } from '../data/portfolio';
+import KnightPortrait from './icons/KnightPortrait.astro';
 
-const { personal } = portfolioData;
+const { personal } = portfolioConfig;
 ---
 
-<section id="about" class="py-20 border-t border-white/[0.08] relative">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="space-y-4 mb-12">
-      <h2 class="text-xs uppercase tracking-widest text-indigo-400 font-semibold">About Me</h2>
-      <h3 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-        Passionate about crafting exceptional digital experiences.
-      </h3>
+<section id="about" class="py-16 sm:py-20 px-6 sm:px-10 lg:px-12 border-b border-white/[0.08] relative">
+  <!-- Section Tag -->
+  <div class="flex items-center gap-2 text-xs font-mono tracking-widest text-zinc-400 uppercase mb-8">
+    <span class="text-zinc-600">//</span>
+    <span>ABOUT ME</span>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-start">
+    <!-- Knight Avatar Frame -->
+    <div class="md:col-span-4 lg:col-span-3 max-w-[240px] mx-auto md:mx-0 w-full">
+      <KnightPortrait />
+      <div class="pt-3 text-[10px] font-mono text-zinc-500 tracking-wider text-center md:text-left flex items-center justify-between">
+        <span>AVATAR.PIC</span>
+        <span class="text-zinc-600">64x64 PX</span>
+      </div>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-      <!-- Bio text -->
-      <div class="lg:col-span-7 space-y-5 text-slate-300 text-base sm:text-lg leading-relaxed">
-        {personal.bio.map((paragraph) => (
-          <p>{paragraph}</p>
-        ))}
+    <!-- Bio Narrative -->
+    <div class="md:col-span-8 lg:col-span-9 space-y-5 text-xs sm:text-sm font-mono text-zinc-300 leading-relaxed">
+      {personal.bioParagraphs.map((para) => (
+        <p class="text-zinc-400 leading-relaxed">
+          {para}
+        </p>
+      ))}
 
-        <div class="pt-4 flex flex-wrap gap-4 text-sm text-slate-300">
-          <div class="flex items-center gap-2 bg-slate-900/60 border border-white/[0.08] px-4 py-2 rounded-lg">
-            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-            </svg>
-            <span>Based in <strong class="text-white">{personal.location}</strong></span>
-          </div>
-
-          <div class="flex items-center gap-2 bg-slate-900/60 border border-white/[0.08] px-4 py-2 rounded-lg">
-            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-            <span>Available for <strong class="text-white">Full-Time & Contracts</strong></span>
-          </div>
+      <!-- Key Details Row -->
+      <div class="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs font-mono">
+        <div class="p-3 border border-white/[0.06] bg-white/[0.02]">
+          <span class="text-zinc-500 block text-[10px] uppercase">Education</span>
+          <strong class="text-white font-normal">SPSMB &rarr; VSB-TUO</strong>
+        </div>
+        <div class="p-3 border border-white/[0.06] bg-white/[0.02]">
+          <span class="text-zinc-500 block text-[10px] uppercase">Specialty</span>
+          <strong class="text-white font-normal">Game Dev &amp; Systems</strong>
+        </div>
+        <div class="p-3 border border-white/[0.06] bg-white/[0.02]">
+          <span class="text-zinc-500 block text-[10px] uppercase">Familiar</span>
+          <strong class="text-white font-normal">Kirby 🦎 (Bearded Dragon)</strong>
         </div>
       </div>
 
-      <!-- Highlights Card -->
-      <div class="lg:col-span-5 bg-gradient-to-b from-slate-900/80 to-slate-950/80 border border-white/[0.08] rounded-2xl p-6 sm:p-8 space-y-6 shadow-xl">
-        <h4 class="text-lg font-semibold text-white flex items-center gap-2">
-          <span class="w-2.5 h-2.5 rounded-full bg-indigo-500"></span>
-          Core Principles
-        </h4>
+      <!-- Action Button: Download CV / Contact -->
+      <div class="pt-4 flex flex-wrap items-center gap-4">
+        <a
+          href="/cv.pdf"
+          target="_blank"
+          download
+          class="inline-flex items-center gap-2 px-5 py-2.5 border border-white/20 hover:border-white text-xs font-mono tracking-wider text-white hover:bg-white hover:text-black transition-all"
+        >
+          <span>DOWNLOAD CV</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+          </svg>
+        </a>
 
-        <div class="space-y-4">
-          <div class="flex items-start gap-3.5">
-            <div class="p-2 rounded-lg bg-indigo-500/10 text-indigo-400 mt-0.5">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-              </svg>
-            </div>
-            <div>
-              <h5 class="text-sm font-semibold text-white">Performance-First</h5>
-              <p class="text-xs sm:text-sm text-slate-400 mt-0.5">Optimizing load times, assets, and rendering pipelines for instant interactions.</p>
-            </div>
-          </div>
-
-          <div class="flex items-start gap-3.5">
-            <div class="p-2 rounded-lg bg-indigo-500/10 text-indigo-400 mt-0.5">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
-              </svg>
-            </div>
-            <div>
-              <h5 class="text-sm font-semibold text-white">Maintainable Code</h5>
-              <p class="text-xs sm:text-sm text-slate-400 mt-0.5">Writing typed, tested, and self-documenting code built for longevity.</p>
-            </div>
-          </div>
-
-          <div class="flex items-start gap-3.5">
-            <div class="p-2 rounded-lg bg-indigo-500/10 text-indigo-400 mt-0.5">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-              </svg>
-            </div>
-            <div>
-              <h5 class="text-sm font-semibold text-white">Intuitive UX</h5>
-              <p class="text-xs sm:text-sm text-slate-400 mt-0.5">Designing responsive layouts that feel natural across phones, tablets, and desktops.</p>
-            </div>
-          </div>
-        </div>
+        <a
+          href="#contact"
+          class="text-xs font-mono text-zinc-500 hover:text-white transition-colors"
+        >
+          [ GET IN TOUCH ]
+        </a>
       </div>
     </div>
   </div>
