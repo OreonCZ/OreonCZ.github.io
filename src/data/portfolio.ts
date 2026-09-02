@@ -68,20 +68,20 @@ export const portfolioConfig: PortfolioConfig = {
     subtagline: "Independent game developer, pixel artist, and software engineering student with a deep passion for dark fantasy, retro aesthetics, and challenging gameplay mechanics.",
     bioParagraphs: [
       "I successfully graduated from the Secondary Technical School in Mladá Boleslav (SPSMB), specializing in Information Technology. This background honed both my logical programming foundation and creative imagination to build immersive interactive worlds.",
-      "My most ambitious creation so far is 'Catfighter: In the Lands of Sinners', a dark fantasy souls-like action visual novel that I developed and released on Steam for 5€. I poured immense dedication into its pixel art, atmospheric soundtrack, and challenging combat.",
-      "Currently pursuing higher education at VSB-TUO (Technical University of Ostrava). When I'm not writing shaders or compiling code in C# and C, you'll find me listening to heavy metal, animating pixel sprites, or chilling with my bearded dragon Kirby! 🦎"
+      "My most ambitious creation so far is 'Catfighter: In the Lands of Sinners', a dark fantasy souls-like action visual novel that I developed and released on Steam for 4$. I poured immense dedication into its pixel art, atmospheric soundtrack, and challenging combat.",
+      "Currently pursuing higher education at VSB-TUO (Technical University of Ostrava). When I'm not doing something code oriented, you'll find me running in forest while listening to heavy metal music (circle pit training wooooo), drawing digital art for our next project (DREAMLAND), drawing pixel sprites and animations, or chilling with my bearded dragon Kirby! 🦎"
     ],
     location: "Czech Republic (VSB-TUO)",
     status: "Open to work",
     email: "oreoncz@gmail.com",
     version: "VER. 1.0.0",
-    souls: "6660"
+    souls: "67"
   },
   rpgStats: {
     hp: "100/100",
     st: "85/85",
     mp: "70/70",
-    souls: "6660"
+    souls: "666"
   },
   socials: {
     github: "https://github.com/OreonCZ",

@@ -75,8 +75,7 @@ export const portfolioConfig = {
 │   │   │   ├── GameplayScene.astro   # Pixel boss fight scene
 │   │   │   ├── KnightPortrait.astro  # Armored knight avatar
 │   │   │   ├── GothicSigil.astro     # Sword crest art
-│   │   │   ├── CastleLandscape.astro # Dark spires landscape
-│   │   │   └── ProjectIcons.astro    # 5 project SVG badges
+│   │   │   └── ProjectIcons.astro    # 5 project logos
 │   │   ├── Navbar.astro          # Desktop sidebar + mobile header
 │   │   ├── Hero.astro            # Intro & gameplay viewport
 │   │   ├── About.astro           # Bio & knight portrait
