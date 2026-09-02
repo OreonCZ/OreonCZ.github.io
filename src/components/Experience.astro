@@ -1,0 +1,59 @@
+---
+import { portfolioData } from '../data/portfolio';
+
+const { experience } = portfolioData;
+---
+
+<section id="experience" class="py-20 border-t border-white/[0.08] relative">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="space-y-4 mb-12">
+      <h2 class="text-xs uppercase tracking-widest text-indigo-400 font-semibold">Career Milestones</h2>
+      <h3 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+        Work Experience
+      </h3>
+      <p class="text-slate-400 max-w-xl text-sm sm:text-base">
+        A timeline of my professional roles, engineering contributions, and key accomplishments.
+      </p>
+    </div>
+
+    <!-- Timeline items -->
+    <div class="relative border-l border-white/[0.1] ml-3 sm:ml-4 space-y-10 pl-6 sm:pl-8">
+      {experience.map((item) => (
+        <div class="relative group">
+          <!-- Timeline dot -->
+          <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#090d16] border-2 border-indigo-500 group-hover:bg-indigo-500 group-hover:scale-125 transition-all"></div>
+
+          <div class="rounded-2xl bg-gradient-to-b from-slate-900/70 to-[#0d1322] border border-white/[0.08] p-6 sm:p-7 space-y-3 hover:border-white/[0.15] transition-colors">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+              <div>
+                <h4 class="text-lg font-bold text-white tracking-tight">
+                  {item.role}
+                </h4>
+                <div class="text-sm font-medium text-indigo-400">
+                  {item.company}
+                </div>
+              </div>
+              <span class="text-xs text-slate-400 font-mono bg-white/[0.04] px-3 py-1 rounded-full border border-white/[0.06] w-fit">
+                {item.period}
+              </span>
+            </div>
+
+            <p class="text-sm text-slate-300 leading-relaxed pt-1">
+              {item.description}
+            </p>
+
+            {item.technologies && (
+              <div class="flex flex-wrap gap-2 pt-3 border-t border-white/[0.06]">
+                {item.technologies.map((tech) => (
+                  <span class="text-xs font-mono px-2 py-0.5 rounded bg-white/[0.03] text-slate-300 border border-white/[0.05]">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

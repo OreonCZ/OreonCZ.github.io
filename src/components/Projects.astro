@@ -1,0 +1,41 @@
+---
+import { portfolioData } from '../data/portfolio';
+import ProjectCard from './ProjectCard.astro';
+
+const { projects, socialLinks } = portfolioData;
+---
+
+<section id="projects" class="py-20 border-t border-white/[0.08] relative">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+      <div class="space-y-4">
+        <h2 class="text-xs uppercase tracking-widest text-indigo-400 font-semibold">Portfolio</h2>
+        <h3 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+          Featured Projects
+        </h3>
+        <p class="text-slate-400 max-w-xl text-sm sm:text-base">
+          A selection of projects exploring web development, developer tooling, and distributed systems.
+        </p>
+      </div>
+
+      <a
+        href={socialLinks.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 text-sm font-medium text-indigo-400 hover:text-indigo-300 transition-colors group"
+      >
+        <span>View all on GitHub</span>
+        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </a>
+    </div>
+
+    <!-- Project Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {projects.map((project) => (
+        <ProjectCard project={project} />
+      ))}
+    </div>
+  </div>
+</section>

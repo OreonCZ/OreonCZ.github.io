@@ -1,0 +1,40 @@
+---
+import { portfolioData } from '../data/portfolio';
+
+const { skills } = portfolioData;
+---
+
+<section id="skills" class="py-20 border-t border-white/[0.08] relative">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="space-y-4 mb-12">
+      <h2 class="text-xs uppercase tracking-widest text-indigo-400 font-semibold">Technical Expertise</h2>
+      <h3 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+        Skills & Technologies
+      </h3>
+      <p class="text-slate-400 max-w-xl text-sm sm:text-base">
+        Tools, languages, and frameworks I use regularly to bring software projects to life.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {skills.map((category) => (
+        <div class="rounded-2xl bg-gradient-to-b from-slate-900/80 to-[#0d1322] border border-white/[0.08] p-6 space-y-4">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+            <h4 class="text-base font-semibold text-white tracking-tight">
+              {category.category}
+            </h4>
+          </div>
+
+          <div class="flex flex-wrap gap-2 pt-2">
+            {category.skills.map((skill) => (
+              <span class="px-3 py-1.5 rounded-lg text-sm bg-white/[0.04] text-slate-200 border border-white/[0.06] hover:border-indigo-500/40 hover:bg-indigo-500/10 transition-colors">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
