@@ -75,7 +75,7 @@ export const portfolioConfig: PortfolioConfig = {
     location: "Czech Republic (VSB-TUO)",
     status: "Open to work",
     email: "oreoncz@gmail.com",
-    version: "VER. 1.0.0"
+    version: "1.0.0"
   },
   experiences: [
     {
