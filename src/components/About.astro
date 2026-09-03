@@ -2,7 +2,7 @@
 import { portfolioConfig } from '../data/portfolio';
 import KnightPortrait from './icons/KnightPortrait.astro';
 
-const { personal } = portfolioConfig;
+const { personal, experiences } = portfolioConfig;
 ---
 
 <section id="about" class="py-16 sm:py-20 px-6 sm:px-10 lg:px-12 border-b border-white/[0.08] relative">
@@ -17,8 +17,8 @@ const { personal } = portfolioConfig;
     <div class="md:col-span-4 lg:col-span-3 max-w-[240px] mx-auto md:mx-0 w-full">
       <KnightPortrait />
       <div class="pt-3 text-[10px] font-mono text-zinc-500 tracking-wider text-center md:text-left flex items-center justify-between">
-        <span>AVATAR.PIC</span>
-        <span class="text-zinc-600">// OreonCZ</span>
+        <span>// OreonCZ</span>
+        <span class="text-zinc-600">Age: 21 [1.9.2005]</span>
       </div>
     </div>
 
@@ -46,12 +46,37 @@ const { personal } = portfolioConfig;
         </div>
       </div>
 
+      <!-- Experience Log -->
+      {experiences && experiences.length > 0 && (
+        <div class="pt-4 space-y-3">
+          <div class="flex items-center gap-2 text-xs font-mono tracking-widest text-zinc-400 uppercase">
+            <span class="text-zinc-600">//</span>
+            <span>EXPERIENCE LOG</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 font-mono text-xs">
+            {experiences.map((exp) => (
+              <div class="p-3 border border-white/[0.08] bg-white/[0.02] space-y-1.5">
+                <div class="flex items-start justify-between gap-2">
+                  <span class="font-bold text-white tracking-wide">{exp.role}</span>
+                  <span class="text-[10px] text-zinc-500 whitespace-nowrap">{exp.period}</span>
+                </div>
+                <div class="text-[11px] text-zinc-300 font-semibold">{exp.company}</div>
+                <p class="text-[11px] text-zinc-400 leading-relaxed">
+                  {exp.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       <!-- Action Button: Download CV / Contact -->
       <div class="pt-4 flex flex-wrap items-center gap-4">
         <a
-          href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/cv.pdf`}
+          href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/myResume_FK.pdf`}
           target="_blank"
-          download
+          download="filip_kucera_CV.pdf"
           class="inline-flex items-center gap-2 px-5 py-2.5 border border-white/20 hover:border-white text-xs font-mono tracking-wider text-white hover:bg-white hover:text-black transition-all"
         >
           <span>DOWNLOAD CV</span>

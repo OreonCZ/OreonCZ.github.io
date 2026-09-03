@@ -1,94 +1,42 @@
-# OZ GAMEDEV — Web Portfolio 🗡️
+# Filip Kučera — Portfolio
 
-A dark fantasy, gothic game developer HUD web portfolio built with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com).
-
-Inspired by Souls-like games, retro CRTs, and high-performance game HUDs.
-
----
-
-## 🎮 Features
-
-- 💀 **Souls-Like HUD Aesthetic**: Monospace technical tags (`// GAME DEVELOPER`, `// GAMEPLAY.GIF`), viewfinder corner crosses (`+`), and custom scanlines.
-- 🗡️ **Gothic Sigil & Pixel Art**: Handcrafted vector illustrations for dark fantasy gameplay scenes, knight portraits, and project crests.
-- 📊 **RPG Status Elements**: Live RPG gauges (`HP`, `ST`, `MP`), soul counter, and window controls.
-- 🕹️ **Authentic Project Showcase**:
-  - **Catfighter: In the Lands of Sinners** (Steam)
-  - **Breakout!** (C / SDL2)
-  - **OsuCraft** (Browser Rhythm Game)
-  - **Steelware.co** (FNAF-Inspired Web Game)
-  - **TrashIT** (MERN Stack Platform)
-- 📱 **Adaptive Layout**: Fixed left HUD sidebar on desktop, responsive top header and drawer on mobile.
-- ⚡ **Zero Overhead**: Static site output (~50 KB) with near-zero runtime JavaScript.
+> Personal portfolio showcasing game development, software projects, and digital pixel art.  
+> **Live Website**: [oreoncz.github.io/portfolioWeb](https://oreoncz.github.io/portfolioWeb/)
 
 ---
 
-## 🚀 Getting Started
+## Featured Projects
 
-### 1. Development Server
-```bash
-npm run dev
-```
-Open [http://localhost:4321](http://localhost:4321) in your browser.
+- **[Catfighter: In the Lands of Sinners](https://store.steampowered.com/app/3664280/Catfighter_In_the_Lands_of_Sinners/)** (Steam)  
+  Dark fantasy action visual novel developed solo in Unity & C#. Features handcrafted pixel art, atmospheric audio, and custom combat mechanics.
 
-### 2. Build for Production
-```bash
-npm run build
-```
-Generates optimized static HTML in the `dist/` directory.
+- **[Breakout!](https://github.com/OreonCZ)** (C / SDL2)  
+  Classic arcade brick-breaker built from scratch in C using SDL2 for window management, rendering, and audio.
 
-### 3. Preview Production Build
-```bash
-npm run preview
-```
+- **[OsuCraft](https://github.com/OreonCZ)** (Web)  
+  Minecraft-inspired rhythm game running directly in the browser.
+
+- **[Steelware.co](https://github.com/OreonCZ)** (Web)  
+  FNAF-inspired browser game featuring custom camera systems, audio cues, and retro atmosphere.
+
+- **[TrashIT](https://github.com/OreonCZ)** (MERN Stack)  
+  Full-stack web application designed for electronic waste recycling and hardware classification.
 
 ---
 
-## ✏️ Customization
+## Tech Stack & Skills
 
-All portfolio content, projects, skills, and links can be customized in **`src/data/portfolio.ts`**:
-
-```typescript
-export const portfolioConfig = {
-  personal: {
-    handle: "OREONCZ",
-    brand: "OREONCZ",
-    name: "Filip Kučera",
-    role: "STUDENT & DEVELOPER",
-    tagline: "CRAFTING DARK WORLDS & EXPERIENCES.",
-    // ...
-  },
-  // ...
-};
-```
+- **Game Development**: Unity, C#, C, C++, SDL2, Shader Graph
+- **Web & Software**: TypeScript, JavaScript, React, Node.js, Astro, Tailwind CSS
+- **Design & Tools**: Aseprite (Pixel Art & Animation), Figma, Linux, Git
 
 ---
 
-## 📂 Architecture
+## Contact & Links
 
-```text
-/
-├── public/
-│   └── favicon.svg               # OreonCZ monogram icon
-├── src/
-│   ├── components/
-│   │   ├── icons/
-│   │   │   ├── GameplayScene.astro   # Poster art template scene
-│   │   │   ├── KnightPortrait.astro  # Portrait avatar frame
-│   │   │   └── ProjectIcons.astro    # 5 project logos
-│   │   ├── Navbar.astro          # Desktop sidebar + mobile header
-│   │   ├── Hero.astro            # Intro & gameplay viewport
-│   │   ├── About.astro           # Bio & portrait
-│   │   ├── Projects.astro        # 5-card project showcase
-│   │   ├── ProjectCard.astro     # Individual game card
-│   │   ├── HudWidgets.astro      # Skills, Recent Project, Status
-│   │   ├── Contact.astro         # Direct transmission & SadSun art
-│   │   └── Footer.astro          # Bottom status ticker
-│   ├── data/
-│   │   └── portfolio.ts          # Authentic portfolio data
-│   ├── layouts/
-│   │   └── Layout.astro          # Window frame HUD wrapper
-│   ├── pages/
-│   │   └── index.astro           # Aggregated page
-│   └── styles/
-│       └── global.css            # CRT scanlines & HUD corners
-```
+- **Website**: [oreoncz.github.io/portfolioWeb](https://oreoncz.github.io/portfolioWeb/)
+- **GitHub**: [@OreonCZ](https://github.com/OreonCZ)
+- **LinkedIn**: [Filip Kučera](https://www.linkedin.com/in/filip-ku%C4%8Dera-592929294/)
+- **Instagram**: [@oreoncz](https://www.instagram.com/oreoncz/)
+- **Steam**: [Catfighter Store Page](https://store.steampowered.com/app/3664280/Catfighter_In_the_Lands_of_Sinners/)
+- **Email**: [oreoncz@gmail.com](mailto:oreoncz@gmail.com)

@@ -18,6 +18,13 @@ export interface SkillProgress {
   level: number;
 }
 
+export interface ExperienceItem {
+  role: string;
+  company: string;
+  period: string;
+  description: string;
+}
+
 export interface PortfolioConfig {
   personal: {
     handle: string;
@@ -32,6 +39,7 @@ export interface PortfolioConfig {
     email: string;
     version: string;
   };
+  experiences: ExperienceItem[];
   socials: {
     github: string;
     linkedin: string;
@@ -56,19 +64,33 @@ export const portfolioConfig: PortfolioConfig = {
     handle: "OREONCZ",
     brand: "OREONCZ",
     name: "Filip Kučera",
-    role: "STUDENT & DEVELOPER & COFFEIN ENJOYER",
+    role: "STUDENT & DEVELOPER & COFFAINE ENJOYER",
     tagline: "CRAFTING WORLDS & EXPERIENCES WITH SOUL.",
     subtagline: "Independent game developer, artist, and software engineering student with a deep passion for unique projects with soul and depth, dark/retro aesthetics, and challenging gameplay mechanics.",
     bioParagraphs: [
-      "I successfully graduated from the Secondary Technical School in Mladá Boleslav (SPSMB), specializing in Information Technology. This background honed both my logical programming foundation and creative imagination to build immersive interactive worlds. I believe that every project needs to have depth and be unique, otherwise it iss forgettable and doesn't stand up. For example:",
-      "My most ambitious project so far is 'Catfighter: In the Lands of Sinners', a dark fantasy souls-like action visual novel that I developed and released on Steam for 4$. I poured immense dedication into its pixel art, atmospheric soundtrack, and challenging combat. In my free time, me and my friends are working on a brand new game called 'Borders of Dreamland'.",
-      "Currently pursuing higher education at VSB-TUO (Technical University of Ostrava). When I'm not doing something code oriented, you'll find me running in forest while listening to heavy metal music (training for circle pits on metal festivals wooooo + best therapy), drawing digital art for our next project (Borders of Dreamland), drawing pixel sprites and animations, nerding about Pokémon TCG, playing cozy videogames for relaxation (brutal), or chilling with my bearded dragon Kirby! 🦎"
+      "I successfully graduated from the Secondary Technical School in Mladá Boleslav (SPSMB), specializing in Information Technology. This background honed both my logical programming foundation and creative imagination to build immersive interactive experiences. I believe every project needs depth and a distinct identity to truly stand out. For example:",
+      "My most ambitious project so far is 'Catfighter: In the Lands of Sinners', a dark fantasy souls-like action visual novel that I developed and released on Steam for 4$. I poured immense dedication into its pixel art, depth, story, and challenging combat. In my free time, my friends and I are working on a brand new game called 'Borders of Dreamland'.",
+      "Currently pursuing higher education at VSB-TUO (Technical University of Ostrava). When I'm not doing something code oriented, you'll find me running in the woods while listening to heavy metal music (training for circle pits at metal festivals wooooo + best therapy), drawing digital art for our next project (Borders of Dreamland), drawing pixel sprites and animations, geeking out about Pokémon TCG, playing cute cozy videogames for relaxation (brutal), or chilling with my bearded dragon Kirby! 🦎"
     ],
     location: "Czech Republic (VSB-TUO)",
     status: "Open to work",
     email: "oreoncz@gmail.com",
     version: "VER. 1.0.0"
   },
+  experiences: [
+    {
+      role: "Solo Game Developer",
+      company: "Catfighter: In the Lands of Sinners",
+      period: "Sep 2023 – now",
+      description: "Full-cycle indie game development published on Steam. Designed gameplay mechanics in Unity & C#, animated all pixel art sprites and tiles, designed levels, and coordinated Steam store release."
+    },
+    {
+      role: "MyŠkoda App Tester",
+      company: "Škoda Auto",
+      period: "Apr 2023, Apr 2024",
+      description: "QA and manual testing for the official MyŠkoda automotive mobile application, verifying vehicle connectivity, UX flows, and release stability."
+    }
+  ],
   socials: {
     github: "https://github.com/OreonCZ",
     linkedin: "https://www.linkedin.com/in/filip-ku%C4%8Dera-592929294/",
@@ -115,7 +137,7 @@ export const portfolioConfig: PortfolioConfig = {
       id: "catfighter",
       title: "CATFIGHTER: IN THE LANDS OF SINNERS",
       subtitle: "Souls-like RPG",
-      description: "Souls-like open-world visual novel with cute cats and creepy elements. Available on Steam for 5€.",
+      description: "Souls-like open-world visual novel with cute cats and creepy elements. Available on Steam for 4€.",
       genre: "Souls-like RPG",
       tags: ["Unity", "C#", "Pixel Art", "Steam"],
       iconType: "catfighter",
