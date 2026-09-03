@@ -7,13 +7,14 @@
     scroll-behavior: smooth;
     color-scheme: dark;
     background-color: #060709;
+    overflow-x: clip;
   }
 
   body {
     background-color: #060709;
     color: #e2e8f0;
     font-family: 'JetBrains Mono', monospace;
-    overflow-x: hidden;
+    overflow-x: clip;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

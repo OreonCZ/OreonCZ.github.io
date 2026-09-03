@@ -111,12 +111,11 @@ export const portfolioConfig: PortfolioConfig = {
     "Networking",
     "Figma",
     "Aseprite",
-    "Shader Graph",
     "C / Assembly",
     "SDL2",
     "TypeScript / JavaScript",
     "MERN Stack",
-    "Linux Systems",
+    "Linux",
     "Electron",
     "Git"
   ],

@@ -1,7 +1,7 @@
 # Filip Kučera — Portfolio
 
 > Personal portfolio showcasing game development, software projects, and digital pixel art.  
-> **Live Website**: [oreoncz.github.io/portfolioWeb](https://oreoncz.github.io/portfolioWeb/)
+> **Live Website**: [oreoncz.github.io](https://oreoncz.github.io/)
 
 ---
 
@@ -26,7 +26,7 @@
 
 ## Tech Stack & Skills
 
-- **Game Development**: Unity, C#, C, C++, SDL2, Shader Graph
+- **Game Development**: Unity, C#, C, C++, SDL2
 - **Web & Software**: TypeScript, JavaScript, React, Node.js, Astro, Tailwind CSS
 - **Design & Tools**: Aseprite (Pixel Art & Animation), Figma, Linux, Git
 
@@ -34,7 +34,7 @@
 
 ## Contact & Links
 
-- **Website**: [oreoncz.github.io/portfolioWeb](https://oreoncz.github.io/portfolioWeb/)
+- **Website**: [oreoncz.github.io](https://oreoncz.github.io/)
 - **GitHub**: [@OreonCZ](https://github.com/OreonCZ)
 - **LinkedIn**: [Filip Kučera](https://www.linkedin.com/in/filip-ku%C4%8Dera-592929294/)
 - **Instagram**: [@oreoncz](https://www.instagram.com/oreoncz/)
