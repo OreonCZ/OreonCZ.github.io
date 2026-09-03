@@ -40,3 +40,10 @@
 - **Instagram**: [@oreoncz](https://www.instagram.com/oreoncz/)
 - **Steam**: [Catfighter Store Page](https://store.steampowered.com/app/3664280/Catfighter_In_the_Lands_of_Sinners/)
 - **Email**: [oreoncz@gmail.com](mailto:oreoncz@gmail.com)
+
+---
+
+## License
+
+* **Code:** [MIT License](LICENSE)
+* **Visual Assets & Media:** All artwork, GIFs, and sprites in `/src/assets/images/` are © OreonCZ. All rights reserved.
