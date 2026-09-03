@@ -6,14 +6,14 @@ import kevin from "@/assets/images/KevinShopIdle.gif"
 const { personal, socials } = portfolioConfig;
 ---
 
-<section id="contact" class="py-16 sm:py-20 px-6 sm:px-10 lg:px-12 border-b border-white/[0.08] relative">
+<section id="contact" class="py-16 sm:py-20 px-4 sm:px-10 lg:px-12 border-b border-white/[0.08] relative overflow-hidden">
   <!-- Section Tag -->
   <div class="flex items-center gap-2 text-xs font-mono tracking-widest text-zinc-400 uppercase mb-8">
     <span class="text-zinc-600">//</span>
     <span>CONTACT</span>
   </div>
 
-  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-white/10 bg-black/40 p-6 sm:p-8 relative">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center border border-white/10 bg-black/40 p-4 sm:p-8 relative overflow-hidden">
     <!-- Corner crosses -->
     <span class="absolute top-1 left-1 text-[8px] font-mono text-white/30">+</span>
     <span class="absolute top-1 right-1 text-[8px] font-mono text-white/30">+</span>
@@ -21,21 +21,21 @@ const { personal, socials } = portfolioConfig;
     <span class="absolute bottom-1 right-1 text-[8px] font-mono text-white/30">+</span>
 
     <!-- Contact Info (Left 7 cols on desktop) -->
-    <div class="lg:col-span-7 space-y-6">
-      <div class="space-y-3">
-        <h3 class="text-xl sm:text-2xl font-bold font-mono tracking-wider text-white uppercase">
+    <div class="lg:col-span-7 space-y-6 min-w-0 w-full">
+      <div class="space-y-3 min-w-0 w-full">
+        <h3 class="text-xl sm:text-2xl font-bold font-mono tracking-wider text-white uppercase break-words">
           INITIATE CONTACT SIGNAL
         </h3>
-        <p class="text-xs sm:text-sm font-mono text-zinc-400 leading-relaxed max-w-lg">
+        <p class="text-xs sm:text-sm font-mono text-zinc-400 leading-relaxed max-w-lg break-words">
           Interested in game development collaborations, software engineering roles, or indie game design? Transmit a message directly into my inbox.
         </p>
 
         <!-- NPC Dialog / Kevin -->
-        <div class="flex items-center gap-4 p-3 border border-white/10 bg-black/50 relative">
+        <div class="flex items-center gap-3 sm:gap-4 p-2.5 sm:p-3 border border-white/10 bg-black/50 relative overflow-hidden">
           <span class="absolute top-0.5 left-0.5 text-[8px] font-mono text-white/30">+</span>
           <span class="absolute bottom-0.5 right-0.5 text-[8px] font-mono text-white/30">+</span>
 
-          <div class="w-16 h-20 sm:w-20 sm:h-24 flex-shrink-0 overflow-hidden border border-white/10 bg-black">
+          <div class="w-14 h-18 sm:w-20 sm:h-24 flex-shrink-0 overflow-hidden border border-white/10 bg-black">
             <img
               src={kevin.src}
               alt="Kevin"
@@ -43,10 +43,10 @@ const { personal, socials } = portfolioConfig;
               class="w-full h-full object-cover object-bottom select-none pointer-events-none [image-rendering:pixelated]"
             />
           </div>
-          <div class="space-y-1">
+          <div class="space-y-1 min-w-0 flex-1">
             <div class="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">// KEVIN.NPC</div>
-            <p class="text-xs font-mono text-zinc-300 leading-relaxed">
-              "Looking for a game dev, pixel artist, or software architect? Transmit your signal. YEEEEEEEEEEEEEEEEEEEEEEHAAAAAAAAAAAAAAAAWWWWWWWWWWW" :DDDDDDDDDDD
+            <p class="text-xs font-mono text-zinc-300 leading-relaxed break-words [overflow-wrap:anywhere]">
+              "Yo! Looking for a game dev, designer, software engineering buddy, or anything IT related? Transmit your signal, because every bit of experience is beneficial for that young fella (he told me). YEEEEEEEEEEEEEEEEEEEEEEHAAAAAAAAAAAAAAAAWWWWWWWWWWW" :DDDDDDDDDDD
             </p>
           </div>
         </div>

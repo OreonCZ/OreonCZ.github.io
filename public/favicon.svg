@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
   <rect width="32" height="32" rx="4" fill="#060709"/>
   <rect x="2" y="2" width="28" height="28" rx="2" stroke="white" stroke-opacity="0.3" stroke-width="1.5"/>
-  <text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="monospace" font-size="13" font-weight="900" fill="white">OZ</text>
+  <text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="monospace" font-size="14" font-weight="900" fill="white">O</text>
   <circle cx="16" cy="27" r="1" fill="white" fill-opacity="0.7"/>
 </svg>

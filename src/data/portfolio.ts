@@ -31,13 +31,6 @@ export interface PortfolioConfig {
     status: string;
     email: string;
     version: string;
-    souls: string;
-  };
-  rpgStats: {
-    hp: string;
-    st: string;
-    mp: string;
-    souls: string;
   };
   socials: {
     github: string;
@@ -61,27 +54,20 @@ export interface PortfolioConfig {
 export const portfolioConfig: PortfolioConfig = {
   personal: {
     handle: "OREONCZ",
-    brand: "OZ GAMEDEV",
+    brand: "OREONCZ",
     name: "Filip Kučera",
-    role: "GAME DEVELOPER",
-    tagline: "CRAFTING DARK WORLDS & EXPERIENCES.",
-    subtagline: "Independent game developer, pixel artist, and software engineering student with a deep passion for dark fantasy, retro aesthetics, and challenging gameplay mechanics.",
+    role: "STUDENT & DEVELOPER & COFFEIN ENJOYER",
+    tagline: "CRAFTING WORLDS & EXPERIENCES WITH SOUL.",
+    subtagline: "Independent game developer, artist, and software engineering student with a deep passion for unique projects with soul and depth, dark/retro aesthetics, and challenging gameplay mechanics.",
     bioParagraphs: [
-      "I successfully graduated from the Secondary Technical School in Mladá Boleslav (SPSMB), specializing in Information Technology. This background honed both my logical programming foundation and creative imagination to build immersive interactive worlds.",
-      "My most ambitious creation so far is 'Catfighter: In the Lands of Sinners', a dark fantasy souls-like action visual novel that I developed and released on Steam for 4$. I poured immense dedication into its pixel art, atmospheric soundtrack, and challenging combat.",
-      "Currently pursuing higher education at VSB-TUO (Technical University of Ostrava). When I'm not doing something code oriented, you'll find me running in forest while listening to heavy metal music (circle pit training wooooo), drawing digital art for our next project (DREAMLAND), drawing pixel sprites and animations, or chilling with my bearded dragon Kirby! 🦎"
+      "I successfully graduated from the Secondary Technical School in Mladá Boleslav (SPSMB), specializing in Information Technology. This background honed both my logical programming foundation and creative imagination to build immersive interactive worlds. I believe that every project needs to have depth and be unique, otherwise it iss forgettable and doesn't stand up. For example:",
+      "My most ambitious project so far is 'Catfighter: In the Lands of Sinners', a dark fantasy souls-like action visual novel that I developed and released on Steam for 4$. I poured immense dedication into its pixel art, atmospheric soundtrack, and challenging combat. In my free time, me and my friends are working on a brand new game called 'Borders of Dreamland'.",
+      "Currently pursuing higher education at VSB-TUO (Technical University of Ostrava). When I'm not doing something code oriented, you'll find me running in forest while listening to heavy metal music (training for circle pits on metal festivals wooooo + best therapy), drawing digital art for our next project (Borders of Dreamland), drawing pixel sprites and animations, nerding about Pokémon TCG, playing cozy videogames for relaxation (brutal), or chilling with my bearded dragon Kirby! 🦎"
     ],
     location: "Czech Republic (VSB-TUO)",
     status: "Open to work",
     email: "oreoncz@gmail.com",
-    version: "VER. 1.0.0",
-    souls: "67"
-  },
-  rpgStats: {
-    hp: "100/100",
-    st: "85/85",
-    mp: "70/70",
-    souls: "666"
+    version: "VER. 1.0.0"
   },
   socials: {
     github: "https://github.com/OreonCZ",
@@ -92,15 +78,17 @@ export const portfolioConfig: PortfolioConfig = {
   },
   skillsProgress: [
     { name: "UNITY", level: 100 },
-    { name: "C#", level: 100 },
-    { name: "PIXEL ART", level: 100 },
-    { name: "SHADER GRAPH", level: 70 },
-    { name: "JAVASCRIPT / TS", level: 80 }
+    { name: "C#, C++, C", level: 100 },
+    { name: "SOFT SKILLS", level: 100 },
+    { name: "PIXEL & DIGITAL ART", level: 100 },
+    { name: "JAVASCRIPT / TS", level: 90 }
   ],
   allSkills: [
     "Unity Engine",
-    "C#",
-    "Pixel Art & Aseprite",
+    "AI",
+    "Networking",
+    "Figma",
+    "Aseprite",
     "Shader Graph",
     "C / Assembly",
     "SDL2",
@@ -108,16 +96,15 @@ export const portfolioConfig: PortfolioConfig = {
     "MERN Stack",
     "Linux Systems",
     "Electron",
-    "Git",
-    "Game Physics & Audio"
+    "Git"
   ],
   projects: [
       {
       id: "dreamland",
       title: "BORDERS OF DREAMLAND",
-      subtitle: "In Development",
+      subtitle: "Surreal political horror",
       description: "In Development",
-      genre: "Psychological political horror",
+      genre: "Surreal horror with political background",
       tags: ["Unity", "C#", "Pixel Art", "Blender", "Steam"],
       iconType: "null",
       link: "https://github.com/RadekPelikan/pre-gamejam-2026",
@@ -184,7 +171,7 @@ export const portfolioConfig: PortfolioConfig = {
   recentProject: {
     title: "CATFIGHTER: IN THE LANDS OF SINNERS",
     subtitle: "Souls-like action RPG with pixel art visuals and dark fantasy world.",
-    description: "Final graduation masterpiece: an expansive open-world dark fantasy visual novel where feline champions battle demonic horrors.",
+    description: "Final graduation project: an expansive open-world dark fantasy visual novel where feline champions battle demonic horrors.",
     link: "https://store.steampowered.com/app/3664280/Catfighter_In_the_Lands_of_Sinners/?beta=0",
     steamLink: "https://store.steampowered.com/app/3664280/Catfighter_In_the_Lands_of_Sinners/?beta=0"
   }

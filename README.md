@@ -51,9 +51,9 @@ All portfolio content, projects, skills, and links can be customized in **`src/d
 export const portfolioConfig = {
   personal: {
     handle: "OREONCZ",
-    brand: "OZ GAMEDEV",
+    brand: "OREONCZ",
     name: "Filip Kučera",
-    role: "GAME DEVELOPER",
+    role: "STUDENT & DEVELOPER",
     tagline: "CRAFTING DARK WORLDS & EXPERIENCES.",
     // ...
   },
@@ -68,21 +68,20 @@ export const portfolioConfig = {
 ```text
 /
 ├── public/
-│   └── favicon.svg               # OZ monogram icon
+│   └── favicon.svg               # OreonCZ monogram icon
 ├── src/
 │   ├── components/
 │   │   ├── icons/
-│   │   │   ├── GameplayScene.astro   # Pixel boss fight scene
-│   │   │   ├── KnightPortrait.astro  # Armored knight avatar
-│   │   │   ├── GothicSigil.astro     # Sword crest art
+│   │   │   ├── GameplayScene.astro   # Poster art template scene
+│   │   │   ├── KnightPortrait.astro  # Portrait avatar frame
 │   │   │   └── ProjectIcons.astro    # 5 project logos
 │   │   ├── Navbar.astro          # Desktop sidebar + mobile header
 │   │   ├── Hero.astro            # Intro & gameplay viewport
-│   │   ├── About.astro           # Bio & knight portrait
+│   │   ├── About.astro           # Bio & portrait
 │   │   ├── Projects.astro        # 5-card project showcase
 │   │   ├── ProjectCard.astro     # Individual game card
 │   │   ├── HudWidgets.astro      # Skills, Recent Project, Status
-│   │   ├── Contact.astro         # Direct transmission & castle
+│   │   ├── Contact.astro         # Direct transmission & SadSun art
 │   │   └── Footer.astro          # Bottom status ticker
 │   ├── data/
 │   │   └── portfolio.ts          # Authentic portfolio data
