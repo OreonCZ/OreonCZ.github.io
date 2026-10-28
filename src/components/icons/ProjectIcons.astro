@@ -1,5 +1,6 @@
 ---
 import catfighterLogo from "@/assets/images/GameLogo.png";
+import leniLogo from "@/assets/images/logoleny.png";
 import breakoutLogo from "@/assets/images/breakout.png";
 import steelwareLogo from "@/assets/images/steelware.png";
 import trashitLogo from "@/assets/images/TrashIT.png";
@@ -23,6 +24,11 @@ export const imageMap = {
   catfighter: {
     src: catfighterLogo.src,
     alt: "Catfighter: In the Lands of Sinners logo",
+    pixelated: false,
+  },
+  leni: {
+    src: leniLogo.src,
+    alt: "Coaching by Leny",
     pixelated: false,
   },
   breakout: {
@@ -60,6 +66,7 @@ interface Props {
     src={current.src}
     alt={current.alt}
     draggable="false"
-    class={`object-contain select-none pointer-events-none grayscale-[50%] ${current.pixelated ? '[image-rendering:pixelated]' : ''} ${className}`}
+    class={`object-contain select-none pointer-events-none grayscale-[50%] 
+      ${current.pixelated ? '[image-rendering:pixelated]' : ''} ${className}`}
   />
 )}

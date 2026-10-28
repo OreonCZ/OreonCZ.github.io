@@ -100,24 +100,23 @@ export const portfolioConfig: PortfolioConfig = {
   },
   skillsProgress: [
     { name: "UNITY", level: 100 },
-    { name: "C#, C++, C", level: 100 },
-    { name: "SOFT SKILLS", level: 100 },
+    { name: "C# - .NET", level: 100 },
     { name: "PIXEL & DIGITAL ART", level: 100 },
-    { name: "JAVASCRIPT / TS", level: 90 }
+    { name: "Astro / Tailwind", level: 100 },
+    { name: "JAVASCRIPT / TS", level: 100 }
   ],
   allSkills: [
-    "Unity Engine",
-    "AI",
-    "Networking",
-    "Figma",
-    "Aseprite",
-    "C / Assembly",
-    "SDL2",
-    "TypeScript / JavaScript",
-    "MERN Stack",
+    "PostgreSQL",
     "Linux",
+    "Git",
+    "C",
+    "SDL",
+    "Soft skills",
+    "MERN Stack",
     "Electron",
-    "Git"
+    "Agentic AI",
+    "Figma",
+    "Aseprite"
   ],
   projects: [
       {
@@ -133,10 +132,22 @@ export const portfolioConfig: PortfolioConfig = {
       featured: true
     },
     {
+      id: "leni",
+      title: "Coaching by Leny",
+      subtitle: "Freelancer job",
+      description: "Static website for my client.",
+      genre: "Static Website",
+      tags: ["Astro", "Tailwind"],
+      iconType: "leni",
+      link: "https://www.coachingbyleny.cz",
+      linkType: "WEB",
+      featured: true
+    },
+    {
       id: "catfighter",
       title: "CATFIGHTER: IN THE LANDS OF SINNERS",
       subtitle: "Souls-like RPG",
-      description: "Souls-like open-world visual novel with cute cats and creepy elements. Available on Steam for 4€.",
+      description: "Souls-like open-world visual novel with cats and creepy elements.",
       genre: "Souls-like RPG",
       tags: ["Unity", "C#", "Pixel Art", "Steam"],
       iconType: "catfighter",
@@ -148,7 +159,7 @@ export const portfolioConfig: PortfolioConfig = {
       id: "breakout",
       title: "BREAKOUT!",
       subtitle: "2D Arcade",
-      description: "My first semester project: classic retro breakout game built with SDL2 library in pure C.",
+      description: "Classic retro breakout game built with SDL2 library in pure C.",
       genre: "2D Arcade",
       tags: ["C", "SDL2", "Retro"],
       iconType: "breakout",
@@ -159,7 +170,7 @@ export const portfolioConfig: PortfolioConfig = {
       id: "osucraft",
       title: "OSUCRAFT",
       subtitle: "Rhythm Game",
-      description: "Minecraft-inspired rhythm game. BEWARE! Touch that creeper or he's going to explode. Playable in browser.",
+      description: "Minecraft-inspired rhythm game.",
       genre: "Rhythm Game",
       tags: ["JavaScript", "HTML5", "Audio"],
       iconType: "osucraft",
@@ -170,7 +181,7 @@ export const portfolioConfig: PortfolioConfig = {
       id: "steelware",
       title: "STEELWARE.CO",
       subtitle: "FNAF-Inspired",
-      description: "FNAF-inspired survival horror game made by me and my team. Play for free in browser.",
+      description: "FNAF-inspired survival horror game made by me and my team.",
       genre: "FNAF-Inspired",
       tags: ["Web", "Horror", "Game Dev"],
       iconType: "steelware",
@@ -180,8 +191,8 @@ export const portfolioConfig: PortfolioConfig = {
     {
       id: "trashit",
       title: "TRASHIT",
-      subtitle: "MERN Website",
-      description: "Full-stack MERN website platform for recycling and reselling vintage electronic gear.",
+      subtitle: "Full-stack MERN Website",
+      description: "Platform for recycling and reselling vintage electronic gear.",
       genre: "MERN Website",
       tags: ["React", "Node.js", "MongoDB", "Express"],
       iconType: "trashit",
